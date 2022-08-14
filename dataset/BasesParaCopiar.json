@@ -1,0 +1,34 @@
+{
+	"name": "BasesParaCopiar",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Sistemadearchivos": {
+				"type": "string"
+			},
+			"Rutadearchivo": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().Rutadearchivo",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().Sistemadearchivos",
+					"type": "Expression"
+				}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
