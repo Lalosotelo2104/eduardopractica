@@ -1,0 +1,9 @@
+{
+	"name": "adfeduardopractica",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9f87103c-f5a1-460a-9e97-a4a12319bc5b",
+		"tenantId": "6b5a815c-a979-4e37-a35d-040d078a7399"
+	}
+}
